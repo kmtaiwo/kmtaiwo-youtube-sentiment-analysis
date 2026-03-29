@@ -7,14 +7,12 @@ This project analyses sentiment in YouTube comments to understand audience react
 #### Problem Definition: ###
 Content creators, marketers, and analysts often need to understand how audiences feel about specific videos or channels. Manually reading thousands of comments is not practical. This project automates the full workflow: extract comments, clean the text, classify sentiment, and visualise the results.
 
-Personal project extracted from the [SuperDataScience community course](https://github.com/SuperDataScience-Community-Projects/SDS-CP020-sentiment-analysis-using-youtube). This repository contains only the author’s notebooks, Airflow DAGs, and Streamlit app—not other contributors’ work from the community fork.
-
 
 #### Approach:
 
 1. **Data extraction  —**  Used the YouTube Data API v3 to fetch comments and metadata for any public video
 2. **Preprocessing —** Cleaned raw comment text (removed URLs, emojis, special characters) and tokenised for model input
-3. **Sentiment classification —** Applied a pre-trained Hugging Face transformer model (cardiffnlp/twitter-roberta-base-sentiment-latest) to classify each comment
+3. **Sentiment classification —** Applied a pre-trained Hugging Face transformer model (`cardiffnlp/twitter-roberta-base-sentiment-latest`) to classify each comment
 4. **Visualisation —** Built a Streamlit app where users paste a YouTube URL and see sentiment breakdowns, word clouds, and distribution charts
 
 ## What’s in this repo
@@ -89,6 +87,18 @@ git remote set-url origin https://github.com/kmtaiwo/kmtaiwo-youtube-comment-sen
 
 If GitHub already has commits (for example an initial README), merge with: `git pull origin main --allow-unrelated-histories`, resolve any conflicts, then `git push -u origin main`.
 
+Tools Used
+
+- **Data extraction:** YouTube Data API v3, google-api-python-client
+- **NLP:** Hugging Face Transformers, scikit-learn
+- **Visualisation:** Streamlit, Plotly, Matplotlib, WordCloud
+- **Data handling:** Pandas, NumPy
+
+#### Background:
+This project started as part of a SuperDataScience community project (SDS-CP020). I restructured my contribution into this standalone repository with a proper project layout and deployment configuration.
+
+
+
 ## License
 
-Community course materials remain subject to the original SDS project terms; code authored here is provided as-is for learning and portfolio use.
+MIT

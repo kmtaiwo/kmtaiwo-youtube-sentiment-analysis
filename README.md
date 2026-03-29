@@ -1,8 +1,21 @@
 # YouTube Comment Sentiment Analyser
 
+#### Introduction: ###
 This project analyses sentiment in YouTube comments to understand audience reactions and engagement. It uses a machine learning pipeline (including Hugging Face transformers in the Streamlit app), an Airflow ETL flow for YouTube API data, and exploratory notebooks.
 
+
+#### Problem Definition: ###
+Content creators, marketers, and analysts often need to understand how audiences feel about specific videos or channels. Manually reading thousands of comments is not practical. This project automates the full workflow: extract comments, clean the text, classify sentiment, and visualise the results.
+
 Personal project extracted from the [SuperDataScience community course](https://github.com/SuperDataScience-Community-Projects/SDS-CP020-sentiment-analysis-using-youtube). This repository contains only the author’s notebooks, Airflow DAGs, and Streamlit app—not other contributors’ work from the community fork.
+
+
+#### Approach:
+
+1. **Data extraction  —**  Used the YouTube Data API v3 to fetch comments and metadata for any public video
+2. **Preprocessing —** Cleaned raw comment text (removed URLs, emojis, special characters) and tokenised for model input
+3. **Sentiment classification —** Applied a pre-trained Hugging Face transformer model (cardiffnlp/twitter-roberta-base-sentiment-latest) to classify each comment
+4. **Visualisation —** Built a Streamlit app where users paste a YouTube URL and see sentiment breakdowns, word clouds, and distribution charts
 
 ## What’s in this repo
 

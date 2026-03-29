@@ -1,0 +1,22 @@
+# Python 3.10+ recommended (Airflow 2.10 + recent numpy/pandas wheels)
+pandas>=2.0,<3
+numpy>=1.26,<3
+python-dotenv>=1.0.1
+requests>=2.32
+matplotlib>=3.8
+seaborn>=0.13
+scikit-learn>=1.4
+jupyter_client>=8.6
+ipykernel>=6.29
+
+google-api-python-client>=2.150
+google-auth>=2.30
+streamlit>=1.41
+transformers>=4.48
+huggingface-hub>=0.27
+torch>=2.2
+
+psycopg2-binary>=2.9.9
+
+apache-airflow==2.10.4
+apache-airflow-providers-postgres>=5.14,<7
